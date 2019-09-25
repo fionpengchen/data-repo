@@ -1,0 +1,16 @@
+I cloned a repository of The Los Angeles Times called "women-homicide-analysis." I was attracted by the topic because I'm a female. There were six files in the repository. The one that made sense to me the most, except the "README.md," was the "analysis.ipynb." While I didn't understand most of the Python code in that file, I still got a road map of this project.
+
+Reporters at LA Times first read the raw data of homicides in Python. Those data seemed to be preserved in the format of csv. They figured how many men and women were killed each year and found out the number of female victims was increasing from 2016 to 2018 while that of male was decreasing.
+
+They went on to find out in nearly three of four cases with a female victim, the police had named a suspect. And most victims knew the suspects. In many cases, the killer were the husband, boyfriend or ex-boyfriend of the victim.
+
+Additionally, the LA Times analyzed the median income in neighborhoods where those females died. They found 70% of the victims were killed in neighborhoods with a median income lower than that of LA county. 
+
+All these findings seemed interesting to me. The analysis they did was straightforward. The point is you need to know how to code to get the result. 
+
+As mentioned above, I didn't know most of the codes they did. And I was particularly interested in this one:cases.ip == True. I wondered what that means. They used it to get the count of victim's race, age and other information. For example, they ran these two sets of codes to get the detail about race:  
+  
+cases.race.value_counts('normalize')
+cases[cases.ip == True].race.value_counts('normalize')
+
+The outcomes were slightly different but I didn't understand the meaning.  
