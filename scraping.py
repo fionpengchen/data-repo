@@ -1,5 +1,9 @@
 import requests, mechanize
 from bs4 import BeautifulSoup
+import csv
+
+csvfile = open("npatrol.csv", "a")
+crash_writer = csv.writer(csvfile)
 
 url = "https://www.mshp.dps.missouri.gov/HP68/SearchAction?searchDate=10/31/2017"
 br = mechanize.Browser()
@@ -17,7 +21,13 @@ row_list = main_table.find_all("tr")
 
 for row in row_list:
 	table_cells = row.find_all("td")
-for cell in table_cells:
-	print (cell.text)
+	#print ("===========================================================")
+	output = []
+	for cell in table_cells[1:]:
+		#print("--------------------------------------------------------")
+		#print (cell.text)
+		output.append(cell.text.strip())
+
+	crash_writer.writerow(output)
 
 
